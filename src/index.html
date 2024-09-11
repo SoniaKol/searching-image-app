@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="main.js"></script>
+    <form class="form">
+      <label class="form-label"
+        ><input
+          class="form-input"
+          name="input"
+          type="text"
+          placeholder="Search images..."
+      /></label>
+      <button type="submit" class="form-button">Search</button>
+    </form>
+    <div class="loader"></div>
+    <ul class="img-list"></ul>
+    <button type="button" class="load-button">Load more</button>
+    <p class="load-text">Loading images, please wait...</p>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
